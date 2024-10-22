@@ -1,0 +1,18 @@
+.body{
+    margin: auto;
+    width: 60%;
+    margin: 2px solid black;
+    padding: 10px;
+    background-color: gray;
+}
+
+/* destination input */
+.destinationInput {
+    display: flex;
+    background-color: antiquewhite;
+}
+
+.destinationInput>input {
+    padding: 10px;
+    font-size: 30px;
+}
