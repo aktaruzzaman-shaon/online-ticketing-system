@@ -1,0 +1,16 @@
+{
+    "tickets": [
+        {
+            "startPoint": "dinajpur",
+            "endPoint": "dhaka",
+            "seatAmount": 10,
+            "reck": "kA"
+        },
+        {
+            "startPoint": "dhaka",
+            "endPoint": "dinajpur",
+            "seatAmount": 15,
+            "reck": "UMO"
+        }
+    ]
+}
