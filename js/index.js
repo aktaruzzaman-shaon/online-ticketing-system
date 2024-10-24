@@ -29,5 +29,11 @@ async function getSeatData() {
 
 //showing seats 
 function seat(seatQuantity) {
-     
+
+    for (let i = 0; i <= 10; i++) {
+        const div = document.createElement("div");
+        div.innerHTML = i
+        div.style.cssText = " margin:5px; background-color: red; display:flex; padding:5px";
+        document.getElementById('seats').appendChild(div)
+    }
 }
