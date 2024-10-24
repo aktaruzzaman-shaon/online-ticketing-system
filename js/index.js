@@ -2,23 +2,18 @@
 const travelPoint = document.querySelector('#travelPlace')
 travelPoint.addEventListener('submit', function (event) { getTravelPointValue(event) })
 
-
-
 function getTravelPointValue(event) {
     event.preventDefault()
     const travelStartPoint = event.target.fromStation.value;
     const travelEndPoint = event.target.toStation.value;
-    (function () {
-        let seatDeatailsInfo = getSeatData()
-
-        seatDeatailsInfo
-            .then(seatDeatails => seatDeatails)
-            .then(actualData => dataReceiveFunction(actualData))
+    (async function () {
+        let seatDeatailsInfo = await getSeatData()
+        console.log(seatDeatailsInfo.tickets[0].seatAmount)
+        seat(seatDeatailsInfo.tickets[0].seatAmount)
     })()
 }
 
 // fetching data-----------------------------------
-
 async function getSeatData() {
     try {
         let response = await fetch('http://127.0.0.1:5500/asset/seatList.json')
@@ -31,5 +26,8 @@ async function getSeatData() {
         console.log(error.message)
     }
 }
-const value = getSeatData().then(res => res.JSON()).then(data => data)
-console.log(value)
+
+//showing seats 
+function seat(seatQuantity) {
+     
+}
